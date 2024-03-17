@@ -207,7 +207,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Sprite",
+    "_name": "Play",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -343,7 +343,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Sprite",
+    "_name": "Settings",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -518,6 +518,12 @@
       "__id__": 23
     },
     "isShowInit": false,
+    "startButton": {
+      "__id__": 8
+    },
+    "levelSeclectionNode": {
+      "__id__": 14
+    },
     "_id": ""
   },
   {

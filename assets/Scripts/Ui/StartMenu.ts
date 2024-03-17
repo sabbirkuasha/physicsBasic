@@ -16,6 +16,10 @@ export class StartMenu extends UIbase {
   }
   start() {}
 
+  init() {
+    console.log("init from startMenu");
+  }
+
   hide() {
     console.log("Hide from Start Menu");
     super.hide();

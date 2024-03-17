@@ -1,19 +1,5 @@
-// import { _decorator, Component, Node } from 'cc';
-// const { ccclass, property } = _decorator;
-
 import { GameManager } from "./GameManager";
 import { UIManager } from "./UIManager";
-
-// @ccclass('StaticInstance')
-// export class StaticInstance extends Component {
-//     start() {
-
-//     }
-
-//     update(deltaTime: number) {
-
-//     }
-// }
 
 export class StaticInstance {
   static gameManager: GameManager | undefined = undefined;

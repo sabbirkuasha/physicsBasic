@@ -4,9 +4,10 @@ const { ccclass, property } = _decorator;
 @ccclass("UIbase")
 export class UIbase extends Component {
   @property({
-    displayName: "Hello",
+    displayName: "Show Menu",
   })
   isShowInit: boolean = false;
+
   onLoad() {
     console.log("UIBase onLoad");
     this.isShowInit ? this.show() : this.hide();
