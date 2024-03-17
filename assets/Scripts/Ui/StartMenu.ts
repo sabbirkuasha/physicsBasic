@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Tween, tween } from "cc";
 import { UIbase } from "./UIbase";
+
 const { ccclass, property } = _decorator;
 
 @ccclass("StartMenu")
@@ -20,18 +21,6 @@ export class StartMenu extends UIbase {
 
   show() {
     super.show();
-
-    const node = this.startButton.parent.children[1];
-    console.log(node);
-    node.angle = 0;
-
-    // Start a new tween
-    this.buttonTween = tween(node)
-      .repeatForever(tween().to(1, { angle: 15 }).to(1, { angle: 0 }))
-      .start();
-
-    // Stop the existing tween if it's running
-    this.buttonTween.stop();
   }
 
   init() {
@@ -41,6 +30,13 @@ export class StartMenu extends UIbase {
   hide() {
     console.log("Hide from Start Menu");
     super.hide();
+  }
+
+  onStartBtn() {
+    console.log("Log from StartMenu.ts - onStartBtn ");
+  }
+  onLevelSelectBtn() {
+    console.log("Log on Level Selection Button Press");
   }
 
   update(deltaTime: number) {}
