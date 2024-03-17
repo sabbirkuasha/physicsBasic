@@ -517,7 +517,7 @@
     "__prefab": {
       "__id__": 23
     },
-    "isShowInit": false,
+    "isShowInit": true,
     "startButton": {
       "__id__": 8
     },
