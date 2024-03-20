@@ -267,7 +267,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Summer5",
+    "_name": "1",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -286,7 +286,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -775.748,
+      "x": 0,
       "y": 0,
       "z": 0
     },
@@ -299,8 +299,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.7,
+      "y": 0.7,
       "z": 1
     },
     "_mobility": 0,
@@ -311,7 +311,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "fcAZpaIvJJrYOkqKYCb3vc"
+    "_id": "f4M5nbWhNEP5IkDC4Cg/J2"
   },
   {
     "__type__": "cc.UITransform",
@@ -325,15 +325,15 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 2304,
-      "height": 1296
+      "width": 1080,
+      "height": 1920
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "20XfV3ea1B34Rx4QCgXv3Z"
+    "_id": "8cW3T8NAZA/rjgiFa2zHx/"
   },
   {
     "__type__": "cc.Sprite",
@@ -350,13 +350,13 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 56,
+      "g": 56,
+      "b": 56,
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "d41e1a70-4334-4d80-8863-864d0e656238@f9941",
+      "__uuid__": "e65f9fd2-1e45-4cab-bc48-0a3b9ded11f3@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -372,7 +372,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "ce31E4SC5FAIjkFa9HY/t/"
+    "_id": "b1QA0NTYpDmbSs33GERDJo"
   },
   {
     "__type__": "cc.UITransform",
@@ -386,8 +386,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 285.5
+      "width": 720,
+      "height": 1280
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -680,6 +680,7 @@
       "__uuid__": "37129efc-b80a-4ec8-83f0-564b544c0a54",
       "__expectedType__": "cc.Prefab"
     },
+    "levelSelectPrefab": null,
     "_id": "ed9eMfH8xK4rpFdG4YHhCE"
   },
   {
