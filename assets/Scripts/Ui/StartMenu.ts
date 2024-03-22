@@ -1,16 +1,17 @@
-import { _decorator, Component, Node, Tween, tween } from "cc";
+import { _decorator, Component, Node, Tween, tween, Vec3 } from "cc";
 import { UIbase } from "./UIbase";
+import { Util } from "../utils/util";
 
 const { ccclass, property } = _decorator;
 
 @ccclass("StartMenu")
 // export class StartMenu extends Component {
 export class StartMenu extends UIbase {
-  @property(Node)
-  startButton: Node = undefined;
-  @property(Node)
-  levelSeclectionNode: Node = undefined;
+  // Property Nodes will be availbale as input field inside this node
+  @property(Node) startButton: Node = undefined;
+  @property(Node) levelSeclectionNode: Node = undefined;
 
+  //
   private buttonTween: Tween<Node> | null = null;
 
   onLoad() {
@@ -20,16 +21,46 @@ export class StartMenu extends UIbase {
   start() {}
 
   show() {
-    super.show();
+    super.show(); // Show the "StartMenu-Node" Prefab | "super" is coming from "UIbase", since this script is extends to "UIbase"
+
+    const childOfStartButton = this.startButton.children[0]; // Get the first child of startButton which is ideally "Forward" sprite inside "Play-btn"
+
+    tween(childOfStartButton)
+      .repeatForever(tween().to(1, { angle: 20 }).to(1, { angle: -20 }))
+      .start();
   }
 
   init() {
     console.log("init from startMenu");
+
+    const { TOUCH_START, TOUCH_END, TOUCH_CANCEL } = Node.EventType;
+    // Handle button interaction programmatically
+    this.startButton.on(
+      TOUCH_START,
+      () => {
+        console.log("Touch START");
+        Util.clickDownTween(this.startButton);
+      },
+      this
+    );
+    this.startButton.on(
+      TOUCH_END,
+      () => {
+        console.log("Touch END");
+      },
+      this
+    );
+    this.startButton.on(
+      TOUCH_CANCEL,
+      () => {
+        console.log("Touch CANCEL");
+      },
+      this
+    );
   }
 
   hide() {
-    console.log("Hide from Start Menu");
-    super.hide();
+    super.hide(); // Hide the "StartMenu-Node" Prefab | "super" is coming from "UIbase", since this script is extends to "UIbase"
   }
 
   onStartBtn() {

@@ -757,7 +757,7 @@
     "asset": null,
     "fileId": "7c817069-0810-4103-bc10-d744868be217",
     "instance": null,
-    "targetOverrides": null
+    "targetOverrides": []
   },
   {
     "__type__": "cc.SceneGlobals",

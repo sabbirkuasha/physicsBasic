@@ -10,17 +10,19 @@ export class UIbase extends Component {
 
   onLoad() {
     console.log("UIBase onLoad");
+    console.log("isShowInit: ", this.isShowInit);
     this.isShowInit ? this.show() : this.hide();
   }
   start() {}
 
   show() {
     this.node.active = true;
-    console.log("show function");
   }
+
   hide() {
-    console.log("hide function");
     this.node.active = false;
   }
   update(deltaTime: number) {}
 }
+
+// 1. Show hide ui StartMenu-Node prefab if show menu is true
