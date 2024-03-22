@@ -40,14 +40,16 @@ export class StartMenu extends UIbase {
     this.startButton.on(
       TOUCH_START,
       () => {
-        Util.clickDownTween(this.startButton);
+        Util.clickDownTween(this.startButton, () => {
+          uiManager.gameStart();
+        });
       },
       this
     );
     this.startButton.on(
       TOUCH_END,
       () => {
-        uiManager.gameStart();
+        // uiManager.gameStart();
         // Util.clickDownTween(this.startButton);
       },
       this
@@ -64,14 +66,16 @@ export class StartMenu extends UIbase {
     this.levelSeclectionNode.on(
       TOUCH_START,
       () => {
-        Util.clickDownTween(this.levelSeclectionNode);
+        Util.clickDownTween(this.levelSeclectionNode, () => {
+          uiManager.gameLevelSelect();
+        });
       },
       this
     );
     this.levelSeclectionNode.on(
       TOUCH_END,
       () => {
-        uiManager.gameLevelSelect();
+        // uiManager.gameLevelSelect();
         // Util.clickDownTween(this.levelSeclectionNode);
       },
       this

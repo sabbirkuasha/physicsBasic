@@ -1,7 +1,7 @@
 import { _decorator, Component, Node, Tween, tween, Vec3 } from "cc";
 
 export class Util {
-  static clickDownTween(node: Node | undefined) {
+  static clickDownTween(node: Node | undefined, callback?: () => void) {
     if (!node) {
       return;
     }
@@ -21,9 +21,15 @@ export class Util {
         angle: 0,
         scale: new Vec3(node.scale.x, node.scale.y, node.scale.z),
       })
+      .call(() => {
+        console.log("Call Back function");
+        callback && callback();
+      })
       .start();
   }
-  static clickUpTween(node: Node | undefined) {
+
+  // ClickUp function
+  static clickUpTween(node: Node | undefined, callback?: () => void) {
     if (!node) {
       return;
     }
@@ -42,6 +48,10 @@ export class Util {
         position: new Vec3(node.position.x, node.position.y),
         angle: 0,
         scale: new Vec3(node.scale.x, node.scale.y, node.scale.z),
+      })
+      .call(() => {
+        console.log("Call Back function");
+        callback && callback();
       })
       .start();
   }
