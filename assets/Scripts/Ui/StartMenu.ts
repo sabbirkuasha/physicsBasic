@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Tween, tween, Vec3 } from "cc";
 import { UIbase } from "./UIbase";
 import { Util } from "../utils/util";
+import { UIManager } from "../UIManager";
 
 const { ccclass, property } = _decorator;
 
@@ -30,15 +31,15 @@ export class StartMenu extends UIbase {
       .start();
   }
 
-  init() {
+  init(uiManager: UIManager) {
     console.log("init from startMenu");
 
     const { TOUCH_START, TOUCH_END, TOUCH_CANCEL } = Node.EventType;
-    // Handle button interaction programmatically
+
+    // Handle button interaction programmatically - GameStartButton
     this.startButton.on(
       TOUCH_START,
       () => {
-        console.log("Touch START");
         Util.clickDownTween(this.startButton);
       },
       this
@@ -46,14 +47,39 @@ export class StartMenu extends UIbase {
     this.startButton.on(
       TOUCH_END,
       () => {
-        console.log("Touch END");
+        uiManager.gameStart();
+        // Util.clickDownTween(this.startButton);
       },
       this
     );
     this.startButton.on(
       TOUCH_CANCEL,
       () => {
-        console.log("Touch CANCEL");
+        Util.clickUpTween(this.startButton);
+      },
+      this
+    );
+
+    // Handle button interaction programmatically - GameLevelSelect
+    this.levelSeclectionNode.on(
+      TOUCH_START,
+      () => {
+        Util.clickDownTween(this.levelSeclectionNode);
+      },
+      this
+    );
+    this.levelSeclectionNode.on(
+      TOUCH_END,
+      () => {
+        uiManager.gameLevelSelect();
+        // Util.clickDownTween(this.levelSeclectionNode);
+      },
+      this
+    );
+    this.levelSeclectionNode.on(
+      TOUCH_CANCEL,
+      () => {
+        Util.clickUpTween(this.levelSeclectionNode);
       },
       this
     );

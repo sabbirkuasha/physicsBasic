@@ -18,6 +18,9 @@ export class UIManager extends Component {
   gameStart() {
     console.log("Log from UIManager.ts - Game Start Function");
   }
+  gameLevelSelect() {
+    console.log("Log from UIManager.ts - gameLevelSelect Function");
+  }
 
   start() {
     console.log(StaticInstance.gameManager);
@@ -27,10 +30,11 @@ export class UIManager extends Component {
     const node_startMenu = instantiate(this.startMenuPrefab);
     this.node.addChild(node_startMenu);
     this.node.setPosition(0, 0);
-    console.log(node_startMenu);
-    const comp = node_startMenu.getComponent(StartMenu);
-    console.log(comp);
-    comp.init();
+    // console.log(node_startMenu);
+    const comp_startMenu = node_startMenu.getComponent(StartMenu);
+    // console.log(comp_startMenu);
+    console.log(this);
+    comp_startMenu.init(this);
   }
 
   update(deltaTime: number) {}

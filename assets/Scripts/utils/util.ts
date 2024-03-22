@@ -23,4 +23,26 @@ export class Util {
       })
       .start();
   }
+  static clickUpTween(node: Node | undefined) {
+    if (!node) {
+      return;
+    }
+
+    tween(node)
+      .to(
+        0.2,
+        {
+          position: new Vec3(node.position.x, node.position.y, 0),
+          angle: 0,
+          scale: new Vec3(node.scale.x, node.scale.y, node.scale.z),
+        },
+        { easing: "sineOutIn" }
+      )
+      .to(0.2, {
+        position: new Vec3(node.position.x, node.position.y),
+        angle: 0,
+        scale: new Vec3(node.scale.x, node.scale.y, node.scale.z),
+      })
+      .start();
+  }
 }
