@@ -680,7 +680,10 @@
       "__uuid__": "37129efc-b80a-4ec8-83f0-564b544c0a54",
       "__expectedType__": "cc.Prefab"
     },
-    "levelSelectPrefab": null,
+    "levelSelectPrefab": {
+      "__uuid__": "58792570-5ed8-4b30-a341-7dd72a70b0ec",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": "ed9eMfH8xK4rpFdG4YHhCE"
   },
   {
